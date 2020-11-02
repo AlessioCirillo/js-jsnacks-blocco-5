@@ -59,4 +59,51 @@ console.log(newArray);
 
 
 
+//JSnack 3
 
+var oggetti = [
+    {
+        nome: 'mario',
+        cognome: 'rossi',
+        anni: 30
+    },{
+        nome: 'dario',
+        cognome: 'de angelis',
+        anni: 45
+    }
+];
+
+
+
+var newOggetti = [];
+
+for( var i = 0; i < oggetti.length; i++){
+
+    var newObject = {
+        nome: oggetti[i].nome,
+        cognome: oggetti[i].cognome,
+        anni: oggetti[i].anni,
+        position: randomLetters()
+    }
+
+    newOggetti.push(newObject);
+}
+
+
+
+function randomLetters(){
+    var lettere = 'abcdefghijklmnopqrstuvwxyz';
+
+    var lettera = lettere [randomNumbers (0, lettere.length - 1)];
+
+    return lettera;
+    
+};
+
+
+function randomNumbers(max,min){
+    return Math.floor(Math.random() *(max - min + 1 )) + min;
+};
+
+console.table(oggetti);
+console.table(newOggetti);
